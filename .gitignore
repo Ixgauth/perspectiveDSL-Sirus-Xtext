@@ -1,0 +1,8 @@
+.metadata/
+Xtext-Sirius-integration/
+basicmodel.edit/
+basicmodel.editor/
+basicmodel/
+dslEcore/
+perspectivedsl/
+tester.statemachine/
