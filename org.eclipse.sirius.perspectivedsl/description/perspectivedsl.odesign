@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="perspectivedsl" version="12.0.0.2017041100">
+  <ownedViewpoints name="PerspectiveDesign" modelFileExtension="ppptv">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Perspective Mappings Diagram" domainClass="perspectiveDSL.Perspective" enablePopupBars="true">
+      <metamodel href="../../org.xtext.perspectivedsl/model/generated/PerspectiveDSL.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Language Element Mapping" domainClass="perspectiveDSL.LanguageElementMapping">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="12" height="10">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:ExternalJavaAction" name="OpenEmbeddedXtextEditor" id="org.eclipse.sirius.perspectivedsl.OpenEmbeddedEditor"/>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="LanguageElement">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.eclipse.sirius.perspectivedsl.Services"/>
+  </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
+    <categories name="Default Category">
+      <pages name="XtextPage" labelExpression="Xtext" domainClass="perspectiveDSL.LanguageElementMapping" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <groups name="XtextGroup" labelExpression="Group" domainClass="perspectiveDSL.LanguageElementMapping" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:CustomDescription" name="org.eclipse.sirius.example.fowlerdsl.xtextwidget.XtextPartialViewer" labelExpression="readonly"/>
+      </groups>
+    </categories>
+  </extensions>
+</description:Group>
