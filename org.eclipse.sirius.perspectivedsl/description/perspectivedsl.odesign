@@ -26,9 +26,7 @@
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <categories name="Default Category">
       <pages name="XtextPage" labelExpression="Xtext" domainClass="perspectiveDSL.LanguageElementMapping" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
-      <groups name="XtextGroup" labelExpression="Group" domainClass="perspectiveDSL.LanguageElementMapping" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:CustomDescription" name="org.eclipse.sirius.example.fowlerdsl.xtextwidget.XtextPartialViewer" labelExpression="readonly"/>
-      </groups>
+      <groups name="XtextGroup" labelExpression="Group" domainClass="perspectiveDSL.LanguageElementMapping" semanticCandidateExpression="var:self"/>
     </categories>
   </extensions>
 </description:Group>
